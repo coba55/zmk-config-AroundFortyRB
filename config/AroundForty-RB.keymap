@@ -45,16 +45,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        DEFAULT {
             bindings = <
-&kp Q         &kp W         &kp E         &kp R                      &kp T                          &kp Y        &kp U        &kp I          &kp O          &kp P
-&kp A         &kp S         &kp D         &kp F                      &kp G                          &kp H        &kp J        &kp K          &kp L          &kp MINUS
-&kp Z         &kp X         &kp C         &kp V                      &kp B        &lt 3 LG(LS(S))   &kp N        &kp M        &mkp MB1       &mkp MB2       &kp SLASH
-&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT LANGUAGE_1  &lt 1 SPACE  &lt 2 LANGUAGE_2  &lt 2 ENTER  &lt 6 COLON  &kp BACKSPACE  &lt 4 AT_SIGN  &kp ESC
+&kp Q         &kp W      &kp E       &kp R      &kp T                          &kp Y        &kp U      &kp I                &kp O          &kp P
+&kp A         &kp S      &kp D       &kp F      &kp G                          &kp H        &kp J      &kp K                &kp L          &kp MINUS
+&kp Z         &kp X      &kp C       &kp V      &kp B        &lt 3 LG(LS(S))   &kp N        &kp M      &mkp MB1             &mkp MB2       &kp RIGHT_SHIFT
+&kp LEFT_WIN  &kp COMMA  &kp PERIOD  &lt 1 TAB  &lt 2 SPACE  &lt 3 LANGUAGE_2  &lt 2 ENTER  &kp LANG1  &mt RCTRL BACKSPACE  &lt 4 AT_SIGN  &kp ESC
             >;
         };
 
-        layer_1 {
+        SYMBOL {
             bindings = <
 &kp LG(A)  &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LG(F)          &kp LESS_THAN         &kp GREATER_THAN       &kp CARET        &kp PERCENT    &kp DOLLAR
 &kp TAB    &kp LEFT_GUI  &kp LS(TAB)  &mkp MB1   &mkp MB2           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN      &kp AMPERSAND  &kp DOUBLE_QUOTES
@@ -65,18 +65,18 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        Common_Layer {
+        ALLOW {
             bindings = <
-&kp ESCAPE      &trans        &trans       &kp LG(UP_ARROW)    &trans                       &kp LG(W)          &kp LG(LEFT_ARROW)  &mkp MB3        &kp LG(RIGHT_ARROW)  &kp HOME
-&kp TAB         &kp LEFT_GUI  &kp LS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LC(PAGE_UP)    &mkp MB1            &kp UP_ARROW    &mkp MB2             &kp PAGE_UP
-&kp LEFT_SHIFT  &trans        &trans       &kp LG(DOWN_ARROW)  &trans               &trans  &kp LC(PAGE_DOWN)  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
-&kp LCTRL       &trans        &trans       &trans              &trans               &trans  &trans             &kp LG(T)           &trans          &trans               &kp END
+&kp ESCAPE      &trans  &trans       &kp LG(UP_ARROW)    &trans                       &kp LG(W)          &kp HOME        &kp UP          &kp END          &kp RG(P)
+&kp TAB         &trans  &kp LS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LC(PAGE_UP)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP
+&kp LEFT_SHIFT  &trans  &trans       &kp LG(DOWN_ARROW)  &trans               &trans  &kp LC(PAGE_DOWN)  &trans          &mkp MB1        &mkp MB2         &kp PAGE_DOWN
+&trans          &trans  &trans       &trans              &trans               &trans  &kp DEL            &kp INS         &trans          &trans           &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
-        Scroll_Layer {
+        SCROLL+NUM+FUNC {
             bindings = <
 &kp F1   &kp F2   &kp F3  &kp F4  &kp F5           &kp PLUS      &kp MINUS   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9
 &kp F6   &kp F7   &kp F8  &kp F9  &kp F10          &kp EQUAL     &kp COLON   &kp N4         &kp N5         &kp N6
@@ -85,7 +85,7 @@
             >;
         };
 
-        Setting_Layer {
+        SETTING {
             bindings = <
 &studio_unlock  &trans  &trans  &trans  &trans          &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans          &trans  &trans  &trans  &trans          &trans        &trans          &trans        &trans        &trans
