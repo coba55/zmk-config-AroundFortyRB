@@ -92,7 +92,7 @@
         ALLOW {
             bindings = <
 &kp ESCAPE      &trans  &trans       &kp LG(UP_ARROW)    &trans                       &kp LG(W)          &kp HOME        &kp UP          &kp END          &kp RG(P)
-&kp TAB         &trans  &kp LS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LC(PAGE_UP)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP
+&kp TAB         &trans  &kp RS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LC(PAGE_UP)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP
 &kp LEFT_SHIFT  &trans  &trans       &kp LG(DOWN_ARROW)  &trans               &trans  &kp LC(PAGE_DOWN)  &trans          &mkp MB1        &mkp MB2         &kp PAGE_DOWN
 &trans          &trans  &trans       &trans              &trans               &trans  &kp DEL            &kp INS         &trans          &trans           &trans
             >;
