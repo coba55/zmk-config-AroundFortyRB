@@ -20,26 +20,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        scroller {
-            layers = <3>;
-            input-processors =
-                <&zip_xy_to_scroll_mapper>,
-                <&scroll_transform>,
-                <&scroll_scaler>;
-            process-next;
-
     };
-};
-
-scroll_transform: scroll_transform {
-    compatible = "zmk,input-transform";
-    transform = <INPUT_TRANSFORM_Y_INVERT>;
-};
-
-scroll_scaler: scroll_scaler {
-    compatible = "zmk,input-transform";
-    x = <1>;
-    y = <256>;
 };
 
 &pinctrl {
