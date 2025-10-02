@@ -39,7 +39,7 @@ scroll_transform: scroll_transform {
 scroll_scaler: scroll_scaler {
     compatible = "zmk,input-transform";
     x = <1>;
-    y = <256>; // ←スクロール速度を速く
+    y = <256>;
 };
 
 &pinctrl {
