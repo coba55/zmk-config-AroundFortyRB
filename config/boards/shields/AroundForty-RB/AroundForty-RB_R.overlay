@@ -24,12 +24,22 @@
             layers = <3>;
             input-processors =
                 <&zip_xy_to_scroll_mapper>,
-                <&zip_scroll_transform_y_invert>,
-                <&zip_scroll_scaler_1_256>;
+                <&scroll_transform>,
+                <&scroll_scaler>;
             process-next;
-        };
 
     };
+};
+
+scroll_transform: scroll_transform {
+    compatible = "zmk,input-transform";
+    transform = <INPUT_TRANSFORM_Y_INVERT>;
+};
+
+scroll_scaler: scroll_scaler {
+    compatible = "zmk,input-transform";
+    x = <1>;
+    y = <256>; // ←スクロール速度を速く
 };
 
 &pinctrl {
