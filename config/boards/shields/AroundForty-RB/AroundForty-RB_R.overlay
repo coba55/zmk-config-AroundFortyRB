@@ -20,6 +20,15 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
+        scroller {
+            layers = <3>;
+            input-processors =
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_transform_y_invert>,
+                <&zip_scroll_scaler_1_256>;
+            process-next;
+        };
+
     };
 };
 
