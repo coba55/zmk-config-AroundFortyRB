@@ -110,6 +110,8 @@
 &kp F11          &kp F12  &trans  &trans  &trans   &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp PERCENT
 &kp LC(LA(DEL))  &trans   &trans  &trans  &trans   &trans  &kp ENTER     &kp SLASH     &kp BACKSPACE  &trans        &trans
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SETTING {
