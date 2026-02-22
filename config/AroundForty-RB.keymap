@@ -71,6 +71,15 @@
         };
     };
 
+    /* --- ここから追記 --- */
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        layers = <3>; 
+        input-processors = <&zip_xy_to_scroll_scaler 1 120>;
+    };
+    /* --- ここまで追記 --- */
+
     keymap {
         compatible = "zmk,keymap";
 
