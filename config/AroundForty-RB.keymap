@@ -71,21 +71,6 @@
         };
     };
 
-    // --- ここから追記 ---
-    zip_xy_to_scroll_scaler: zip_xy_to_scroll_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_REL_SCROLL>;     // スクロールタイプとして指定
-    };
-
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        layers = <3>;                 // SCROLL+NUM+FUNC レイヤー
-        input-processors = <&zip_xy_to_scroll_scaler 1 120>;
-    };
-    // --- ここまで追記 ---
-
     keymap {
         compatible = "zmk,keymap";
 
